@@ -141,7 +141,7 @@ gulp.task \watch <[build server]> ->
 #gulp.task \build <[stat web]>
 gulp.task \build <[web]>
 gulp.task \default <[watch]>
-gulp.task \web <[bin css html js do php]>
+gulp.task \web <[bin css html js do php res]>
 
 on-error = ->
   gulp-util.log(gulp-util.colors.red('Error'), it.message) if it
