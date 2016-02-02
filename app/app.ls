@@ -22,19 +22,13 @@ test-data =
   * category: \sea title: 'so hot hot rrrjwefkljfewklfewjklefwjkeflwjfwekljfkelewfjklfewjklfewjkeflw'
   ...
 
-[left, right] =
-  * test-data.slice 0, (test-data.length / 2)
-  * test-data.slice (test-data.length / 2)
-
-for col in [\left, \right]
-  item = d3.select ".col.#col" .select-all \.item
-      .data (eval "#col") .enter!
-      .append \div .classed {+item}
-  item.append \div .classed {+cat}
-      .text -> it.category
-  item.append \div .classed {+image}
-  item.append \div .classed \item-title, true
-      .text -> it.title
-
+item = d3.select ".list" .select-all \.item
+         .data test-data .enter!
+         .append \div .classed {+item}
+item.append \div .classed {+cat}
+    .text -> it.category
+item.append \div .classed {+image}
+item.append \div .classed \item-title, true
+    .text -> it.title
 
 # vi:et:ft=ls:nowrap:sw=2:ts=2
