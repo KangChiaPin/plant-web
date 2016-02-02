@@ -26,4 +26,7 @@ res/	# resource files
 * echo [port-number] > port 
 * see http://localhost:[port-number]/
 
+cd public
+ln -s ../bower_component/semantic-ui/dist/component/themes/default/assets/fonts .
+
 # vi:sw=20:ts=20:wrap

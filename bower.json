@@ -12,10 +12,8 @@
     },
     "semantic-ui": {
       "main": [
-        "dist/semantic.min.css",
-        "dist/semantic.min.js",
-        "dist/semantic.min.js",
-        "dist/themes"
+        "dist/**/*.min.js",
+        "dist/**/*.min.css"
       ]
     }
   },
