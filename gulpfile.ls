@@ -1,6 +1,6 @@
 require! <[async fs glob gulp gulp-cached gulp-chmod gulp-concat gulp-filter
 gulp-insert gulp-jade gulp-livereload gulp-livescript gulp-markdown gulp-print
-gulp-remember gulp-rename gulp-stylus gulp-util main-bower-files sh streamqueue
+gulp-remember gulp-replace gulp-rename gulp-stylus gulp-util main-bower-files sh streamqueue
 tiny-lr gulp-plumber]>
 spawn = require \child_process .spawn
 
@@ -32,6 +32,16 @@ ls-files = [paths.ls]
 tiny-lr-server = tiny-lr!
 livereload = -> gulp-livereload tiny-lr-server
 
+gulp.task \res ->
+  gulp.src paths.res
+    .pipe gulp.dest paths.public+\/res
+  gulp.src main-bower-files /.*\/images\/*/i
+    .pipe gulp.dest paths.public+\res/images
+  gulp.src \bower_components/semantic-ui/dist/themes/*
+    .pipe gulp.dest paths.public+\/themes
+  gulp.src \bower_components/semantic-ui/dist/themes/default/assets/fonts/*
+    .pipe gulp.dest paths.public+\/fonts
+
 gulp.task \bin ->
   gulp.src paths.bin+\build.ls
     .pipe gulp-plumber error-handler: on-error
@@ -41,9 +51,12 @@ gulp.task \bin ->
 
 gulp.task \css ->
   css-bower = gulp.src main-bower-files!
+    .pipe gulp-print -> it
     .pipe gulp-plumber error-handler: on-error
     .pipe gulp-filter \*.css
+    .pipe gulp-replace /(\.\.\/)?themes\/default\/assets/g \.
   styl-app = gulp.src paths.styl
+    .pipe gulp-print -> it
     .pipe gulp-plumber error-handler: on-error
     .pipe gulp-cached \css
     .pipe gulp-stylus use: <[nib]>

@@ -1,8 +1,16 @@
-.page
-  position relative
-  width 300px
-  height 600px
+$height = 600px
+$width = 300px
+
+.container
+  display absolute
   border 1px solid
+  width $width
+  height $height
+.nav
+  float right
+.page
+  top $height
+  position relative
   display none
 .active
   display block

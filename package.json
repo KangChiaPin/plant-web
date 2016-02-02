@@ -24,6 +24,7 @@
     "gulp-print": "~1.0.3",
     "gulp-remember": "^0.2.1",
     "gulp-rename": "~1.2.0",
+    "gulp-replace": "^0.5.4",
     "gulp-stylus": "~0.0.13",
     "gulp-util": "~2.2.14",
     "main-bower-files": "^1.0.1",
