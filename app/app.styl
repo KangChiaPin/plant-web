@@ -1,6 +1,29 @@
 .page
+  position relative
   width 300px
   height 600px
+  border 1px solid
   display none
 .active
   display block
+.circle
+  position absolute
+.big
+  bottom 0%
+  left 40%
+  background-color black
+  width 70px
+  height 70px
+.small
+  bottom 3%
+  left 45%
+  background-color red
+  width 40px
+  height 40px
+  animation orbit 4s linear infinite
+.small:hover
+  animation-play-state paused
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
