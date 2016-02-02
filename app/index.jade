@@ -4,20 +4,36 @@ html
     meta(charset='utf-8')
     title Title
     link(href='app.css' rel='stylesheet')
+    meta(name="viewport" content="initial-scale=1")
   body
     .container
       .nav
-        i.ui.icon.align.justify#menu-icon
+        i.ui.icon.align.justify
+
       .menu
         a(href='#page-01') News
         a(href='#page-02') Personal
         a(href='#page-03') Global
         a(href='#page-04') Share
-      .page#page-01.active
+
+      .page#page-01
+        a(href='#page-01-1')
+          .detail
+            .title title
+            .content contentcontent
         .circle.big
         .circle.small
+
+      .page#page-01-1.active
+        .title
+        .list
+          .left-col
+          .right-col
+
       .page#page-02
+
       .page#page-03
+
       .page#page-04
     script(src='app.js' type='text/javascript')
 // vi:et:ft=ls:nowrap:sw=2:ts=2

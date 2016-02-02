@@ -7,3 +7,4 @@ $ \a .click ->
 $ \.nav .click -> $ \.menu .toggle!
 $ '.menu a' .click -> $ \.menu .hide!
 
+$ '.circle.small' .click -> $ \.detail .add-class \open
