@@ -3,6 +3,7 @@ $ <- -> it jQuery
 
 ########################################################
 # routing
+#
 $ "#{window.location.href - /http:\/\/.*?\//}" .add-class \active
 
 $ \a .click ->
@@ -11,6 +12,7 @@ $ \a .click ->
 
 ########################################################
 # page-01a
+#
 $ \#nav .click -> $ \#menu .toggle!
 
 $ '#menu a' .click -> $ \#menu .hide!
@@ -19,6 +21,7 @@ $ '.circle.small' .click -> $ \.detail .add-class \open
 
 ########################################################
 # page-01b
+
 test-data =
   * category: \sea title: 'so hot hot rrr'
   * category: \sea title: 'so hot hot rrrjwefkljfewklfewjklefwjkeflwjfwekljfkelewfjklfewjklfewjkeflw'
@@ -50,5 +53,8 @@ for col in [\left, \right]
 
 ########################################################
 # page-01c
+
+########################################################
+# page-02
 
 # vi:et:ft=ls:nowrap:sw=2:ts=2
