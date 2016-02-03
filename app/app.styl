@@ -7,6 +7,8 @@ $width = 480px
 ///////////////////////////////////////////////////
 // global
 
+a, a:link, a:hover, a:visited, a:active
+  color black
 .container
   display relative
   background-color #cccccc
@@ -45,9 +47,9 @@ $width = 480px
   margin-right 20px
 
 ///////////////////////////////////////////////////
-// page-01
+// page-01a
 
-#page-01
+#page-01a
   .circle
     position absolute
   .big
@@ -88,9 +90,9 @@ $width = 480px
     display block
 
 ///////////////////////////////////////////////////
-// page-01-1
+// page-01b
 
-#page-01-1
+#page-01b
   .title
     position relative
     background-color #ddd
@@ -107,15 +109,28 @@ $width = 480px
     width 90%
     min-height 79%
     display flex
-    flex-wrap wrap
-    justify-content space-between
-  .list .item
+  .list .col.left
+    height auto
+    flex 1
+  .list .col.right
+    height auto
+    flex 1
+  .list .col.right .item
+    float right
+  .list .col.left .item
+    float left
+  .list .col .item
+    position relative
     margin-top 4%
     background-color #ddd
     min-height 20vh
     height auto
     padding-bottom 4%
-    width 48%
+    width 98%
+    a
+      position absolute
+      width 100%
+      height 100%
     .cat
       font-size 3vw
       display flex
@@ -141,6 +156,5 @@ $width = 480px
       align-items center
       justify-content center
       font-size 3vw
-
 
 // vi:et:sw=2:ts=2
