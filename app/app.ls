@@ -46,6 +46,9 @@ $ '#menu a' .click ->
 $ \.btn.back .on \click, !->
   navigator.back!
 
+$ \.sw-icon .click ->
+  navigator.jump-to \#page-02a
+
 ########################################################
 ## nav block
 
@@ -134,5 +137,6 @@ for col in [\left, \right]
 
 ########################################################
 ## page-02
+
 
 # vi:et:ft=ls:nowrap:sw=2:ts=2
