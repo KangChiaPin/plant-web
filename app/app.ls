@@ -19,6 +19,7 @@ navigator =
 !function jump-to id
   navigator.router-stack.push id
   render-page id; render-nav id
+  if id is /#page-02.+/ then $ \.footer .show! else $ \.footer .hide!
 
 !function back
   navigator.router-stack.pop!
@@ -56,6 +57,10 @@ $ \.page .on \scroll, ->
   if $ this .scroll-top! > 0
     $ \#nav .css \box-shadow, '4px 4px 5px grey'
   else => $ \#nav .css \box-shadow, 'none'
+
+########################################################
+## footer block
+
 
 ########################################################
 ## page-01a <<< calculate orbit
