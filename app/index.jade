@@ -4,11 +4,13 @@ html
     meta(charset='utf-8')
     title Title
     link(href='app.css' rel='stylesheet')
-    meta(name="viewport" content="initial-scale=1")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
   body
     .container
       #nav
-        i.ui.icon.align.justify
+        .back.btn
+        .title
+        .menu.btn
 
       #menu
         a(href='#page-01a') News
@@ -16,20 +18,20 @@ html
         a(href='#page-03') Global
         a(href='#page-04') Share
 
-      .page#page-01a
+      .page#page-01a(data-title='Lastest News')
         .work-title G-Puzzle
         a(href='#page-01b')
           .detail
             .title title
             .content contentcontent
 
-      .page#page-01b
+      .page#page-01b(data-title='Lastest News')
         .title 熱死病
         .list
           .col.left
           .col.right
 
-      .page#page-01c
+      .page#page-01c(data-title='Lastest News')
         .info-block
           .cat 症狀
           .title 不只太冷會死人，太熱也會死人
@@ -37,16 +39,16 @@ html
           .image
           .content 不只太冷會死人，太熱也會死人不只太冷會死人，太熱也會死人不只太冷會死人，太熱也會死人不只太冷會死人，太熱也會死人不只太冷會死人，太熱也會死人
 
-      .page#page-02
+      .page#page-02(data-title='Personal')
         .circle Sign in
         .sw-icon
           .facebook
           .twitter
         .sign-up Sign Up!
 
-      .page#page-03
+      .page#page-03(data-title='Global')
 
-      .page#page-04
+      .page#page-04(data-title='Share')
 
     script(src='app.js' type='text/javascript')
 

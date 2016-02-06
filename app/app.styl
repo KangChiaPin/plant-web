@@ -33,14 +33,32 @@ a, a:link, a:hover, a:visited, a:active
 // global - navigator
 
 #nav
-  height 10%
+  height 10vh
   width 100%
   background-color #EAEAEB
-  display flex
-  align-items center
-  justify-content center
   z-index 100
   position relative
+  font-size 6vw
+  font-weight lighter
+  letter-spacing 3px
+  *
+    position absolute
+    top 50%
+    transform translate(0%,-50%)
+  .btn
+    width 8%
+    height 90%
+    cursor pointer
+  .btn.back
+    background url('res/back.png') center / contain no-repeat
+    left 2vw
+  .btn.menu
+    background url('res/menu.png') center / contain no-repeat
+    right 2vw
+  .title
+    left 50%
+    transform translate(-50%,-50%)
+
 #menu
   display none
   background-color rgba(1, 1, 1, 0.6)
@@ -49,18 +67,8 @@ a, a:link, a:hover, a:visited, a:active
   z-index 999
   a
     display table
-.nav i.align
-  cursor pointer
-  margin-right 20px
 
 ///////////////////////////////////////////////////
-// orbit variable
-
-$big-radius = 10vh
-$hidden-part = 3vh
-$small-radius = 3vh
-$speed = 5s
-
 // page-01a
 
 #page-01a
@@ -70,20 +78,18 @@ $speed = 5s
     text-align center
     font-size 7vh
     margin-top 20vh
+    font-weight lighter
+    letter-spacing 3px
   .circle
     position absolute
     background #A5A5A6
-  .big
+  .circle.big
     left 50%
     transform translate(-50%)
-  .small
+  .circle.small
     z-index 100
     left 50%
     cursor pointer
-  .small:hover
-    width 2*$small-radius+2vh
-    height @width
-    border-radius (@width / 2)
   .detail
     position relative
     margin 0 auto
@@ -113,7 +119,7 @@ $speed = 5s
     display flex
     align-items center
     justify-content center
-    font-size 10vw
+    font-size 8vw
   .list
     position relative
     margin 0 auto

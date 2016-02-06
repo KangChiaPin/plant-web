@@ -112,7 +112,6 @@ gulp.task \server <[do]> ->
   gulp-util.log "Listening on port: #port"
 
 gulp.task \stat <[bin]> ->
-# name = if test-mode then \test.mov else \**/*.mov
   async.each-series glob.sync(paths.input+name)
   , (video, cb) !->
     spawn \node [paths.bin+\/build.js video] .stdout
@@ -133,12 +132,7 @@ gulp.task \watch <[build server]> ->
   gulp.watch paths.ls, <[js]>
   gulp.watch paths.php, <[php]>
   gulp.watch <[do.ls]>, <[do]>
-# gulp.watch paths.input+\**/*.mov {+nocase} ->
-#   return if it.type is \deleted
-#   it.path -= new RegExp "^#{process.cwd!}/" \gm # to relative path
-#   sh "node #{paths.bin}/build.js #{it.path}"
 
-#gulp.task \build <[stat web]>
 gulp.task \build <[web]>
 gulp.task \default <[watch]>
 gulp.task \web <[bin css html js do php res]>
